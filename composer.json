@@ -1,0 +1,31 @@
+{
+    "name": "mayunfeng/printer",
+    "description": "基于易联云oauth2.0接口的软件开发工具包",
+    "license": "MIT",
+    "keywords": ["易联云 api"],
+    "authors": [
+        {
+            "name": "mayunfeng",
+            "email": "mayunfeng@jwsem.com"
+        }
+    ],
+    "require": {
+    	"php": ">=7.0.0",
+        "mayunfeng/supports": "^1.0",
+        "symfony/http-foundation": "^3.0|^4.0",
+        "monolog/monolog": "^1.23",
+        "guzzlehttp/guzzle": "^6.2",
+        "pimple/pimple": "~3.0",
+        "doctrine/cache": "1.4.*"
+	},
+    "autoload": {
+        "psr-4": {
+            "Printer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Printer\\Tests\\": "tests/"
+        }
+    }
+}
