@@ -22,10 +22,5 @@
         "psr-4": {
             "Printer\\": "src/"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Printer\\Tests\\": "tests/"
-        }
     }
 }
