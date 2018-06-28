@@ -9,6 +9,7 @@
             "email": "mayunfeng@jwsem.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
     	"php": ">=7.0.0",
         "mayunfeng/supports": "^1.0",
