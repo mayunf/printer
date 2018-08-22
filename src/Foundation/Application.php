@@ -36,7 +36,7 @@ class Application extends Container
         $this['config'] = function () use ($config) {
             return new Collection($config);
         };
-        
+
         if ($this['config']['debug'] == true) {
             error_reporting(E_ALL);
         }
@@ -56,7 +56,8 @@ class Application extends Container
         $this['access_token'] = function () {
             return new AccessToken(
                 $this['config']['client_id'],
-                $this['config']['secret']
+                $this['config']['secret'],
+                $this['config']['cache']
             );
         };
     }
