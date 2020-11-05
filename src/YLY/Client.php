@@ -21,8 +21,12 @@ class Client extends AbstractAPI
 
     const SET_SOUND = 'https://open-api.10ss.net/printer/setsound'; // 声音调节接口
 
+    const SET_ICON = 'https://open-api.10ss.net/printer/seticon'; // 设置logo
+
+    const DELETE_ICON = 'https://open-api.10ss.net/printer/deleteicon'; // 取消logo
+
     /**
-     *
+     * 订单打印
      * @param array $params
      * @return \Mayunfeng\Supports\Collection
      */
@@ -33,6 +37,7 @@ class Client extends AbstractAPI
 
 
     /**
+     * 终端授权
      * @param array $params
      * @return \Mayunfeng\Supports\Collection
      */
@@ -42,17 +47,30 @@ class Client extends AbstractAPI
     }
 
 
+    // 声音调节
     public function setSound($params=[])
     {
         return $this->parseJSON(self::POST,[self::SET_SOUND,$params]);
     }
 
 
+    // 删除终端授权
     public function delPrinter($params=[])
     {
         return $this->parseJSON(self::POST,[self::PRINT_DEL,$params]);
     }
 
 
+    // 设置logo
+    public function setIcon($params=[])
+    {
+        return $this->parseJSON(self::POST,[self::SET_ICON,$params]);
+    }
+
+    // 取消logo
+    public function deleteIcon($params=[])
+    {
+        return $this->parseJSON(self::POST,[self::DELETE_ICON,$params]);
+    }
 
 }
